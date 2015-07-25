@@ -6,6 +6,9 @@ version := "0.0.1"
 
 scalaVersion := "2.10.3"
 
+
+publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository")))
+
 resolvers += "spray" at "http://repo.spray.io/"
 
 libraryDependencies ++= Seq(
@@ -17,4 +20,3 @@ libraryDependencies ++= Seq(
 )
 
 initialCommands := "import com.film42.forecastioapi._"
-

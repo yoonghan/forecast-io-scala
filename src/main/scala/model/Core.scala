@@ -40,7 +40,7 @@ case class CurrentDataPoint(
   humidity: Double,
   windSpeed: Double,
   windBearing: Double,
-  visibility: Double,
+  visibility: Option[Double],
   cloudCover: Double,
   pressure: Double,
   ozone: Option[Double]) extends DT { def datetime = new Date(time * 1000L) }
@@ -57,7 +57,7 @@ case class HourDataPoint(
   humidity: Double,
   windSpeed: Double,
   windBearing: Double,
-  visibility: Double,
+  visibility: Option[Double],
   cloudCover: Double,
   pressure: Double,
   ozone: Double) extends DT { def datetime = new Date(time * 1000L) }
